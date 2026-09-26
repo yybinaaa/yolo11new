@@ -1542,8 +1542,8 @@
       "sha256": "6b1d5299047b9acd88bf53ebd1427e0986585e8fd59e857e73155c8ffe93db84"
     },
     "README.md": {
-      "bytes": 12103,
-      "sha256": "8c60956071e00dda6bd19b6ca40ae4f915f735d62c9f4cd7b307272b4273a69f"
+      "bytes": 12895,
+      "sha256": "11cb04ddfc917346f2342a2aeffbfd314d50a2788ec8d01c8923ae0578f65692"
     },
     "INFER_FUSAI.py": {
       "bytes": 272,

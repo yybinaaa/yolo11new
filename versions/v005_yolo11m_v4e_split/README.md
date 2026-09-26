@@ -4,6 +4,21 @@
 
 # v005_yolo11m_v4e_split：原始YOLO11m + V4E
 
+## GitHub 上的第 170 轮权重
+
+`weights/epoch170.pt` 使用 Git LFS 保存，大小为 322413021 字节（约 307.48 MiB）。仅此权重纳入上传范围，数据集与其他 PT 仍保留在本地。
+
+安装 Git LFS 后，在仓库根目录执行以下命令可获取该权重：
+
+```text
+git lfs install
+git lfs pull --include="versions/v005_yolo11m_v4e_split/weights/epoch170.pt" --exclude=""
+```
+
+文件 SHA256：`a7fc888aac1940a98c5368efa2ad46552666da7ac4d5ddf7249d0c6ce5a09540`。
+Git LFS 拉取完成后应得到完整 PT；约百字节的文本指针不能作为模型加载。
+环境准备好后，可在本版本目录执行 `python INFER_FUSAI.py --weights epoch170.pt --source "你的图片目录" --check` 检查模型加载；去掉 `--check` 才会进行图片推理。
+
 本版本用于现有2560张训练图 / 640张本地验证图的独立对比。从官方yolo11m.pt重新初始化，不使用已见过全部3200张图的旧项目权重。已于2026-09-25完成180轮训练及训练期间整图验证；640张验证图的V4E评测尚未执行。
 
 ## 文件结构

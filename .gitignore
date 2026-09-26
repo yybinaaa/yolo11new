@@ -20,3 +20,8 @@ runs/*
 /versions/*/code/pretrained/*.pt
 /versions/*/weights/
 /versions/*/inference_packages/
+
+# Publish only the requested V005 epoch-170 checkpoint via Git LFS.
+!/versions/v005_yolo11m_v4e_split/weights/
+/versions/v005_yolo11m_v4e_split/weights/*
+!/versions/v005_yolo11m_v4e_split/weights/epoch170.pt
