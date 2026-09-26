@@ -1,0 +1,95 @@
+{
+  "configuration": {
+    "architecture": "baseline",
+    "dataset": "../../datasets/d001_train_test_4to1",
+    "expected_split": {
+      "train": 2560,
+      "test": 640
+    },
+    "expected_manifest_sha256": "a8d3acbbe9f6b42e4a0ae02fc3a93bdba4b9ad4b1964eb443e7289eb186a50e6",
+    "pretrained": "code/pretrained/yolo11m.pt",
+    "checkpoints": {
+      "save_epochs": [
+        160,
+        170,
+        180
+      ]
+    },
+    "preparation": {
+      "tile_size": 1024,
+      "overlap": 0.2,
+      "min_visibility": 0.3,
+      "min_box_size": 2,
+      "keep_empty_ratio": 0.1,
+      "include_full_images": true,
+      "seed": 42
+    },
+    "train": {
+      "epochs": 180,
+      "imgsz": 1024,
+      "batch": 4,
+      "nbs": 64,
+      "device": "0",
+      "workers": 2,
+      "optimizer": "AdamW",
+      "lr0": 0.001,
+      "lrf": 0.01,
+      "momentum": 0.9,
+      "weight_decay": 0.0005,
+      "warmup_epochs": 3.0,
+      "warmup_bias_lr": 0.0,
+      "cos_lr": true,
+      "seed": 42,
+      "deterministic": true,
+      "amp": true,
+      "cache": false,
+      "mosaic": 0.8,
+      "close_mosaic": 20,
+      "hsv_h": 0.0,
+      "hsv_s": 0.0,
+      "hsv_v": 0.12,
+      "scale": 0.2,
+      "translate": 0.05,
+      "fliplr": 0.5,
+      "flipud": 0.0,
+      "degrees": 0.0,
+      "shear": 0.0,
+      "perspective": 0.0,
+      "mixup": 0.0,
+      "copy_paste": 0.0,
+      "val": true,
+      "plots": true,
+      "save": true,
+      "save_period": -1,
+      "patience": 0,
+      "max_det": 1000,
+      "compile": false
+    },
+    "inference": {
+      "default_dataset_name": "local_val",
+      "exclude_classes": [],
+      "device": "0"
+    },
+    "evaluation": {
+      "iou": 0.5,
+      "note": "Local AP50 and precision/recall; official scoring formula not supplied."
+    }
+  },
+  "split": "a8d3acbbe9f6b42e4a0ae02fc3a93bdba4b9ad4b1964eb443e7289eb186a50e6",
+  "preparation": {
+    "status": "complete",
+    "contract": "f6cc7caf20c295048524218e91881209978377857381d5fbe70f8c52fba622e7",
+    "train_entries": 12484,
+    "val_images": 640,
+    "train_sources": 2560,
+    "train_holdout_overlap": 0,
+    "files": {
+      "data.yaml": "9f0a69fe53d496b8b9e1fb3e00657fe2be084ccea044cdbb13063b38826f4b24",
+      "train.txt": "57e492f6dc770aad5effb7882cba646d80c720bb7c0b1b8b54ff970b0c20b2f2",
+      "val.txt": "3506ecb4b678f2649db0e2e7efe9ce95604e8d59953662d52a12be7eafece0ca",
+      "samples.json": "e42bd41fd0e97dacb5a14c7ed59fb2f88e6b6fe69e8f72cf4952f0ed0dc0fc4f"
+    }
+  },
+  "code": "d931d0265b18a022adda388c71c48e796ff01789cc6ec614cb4390b27be0c009",
+  "official_pretrained": "d5ffc1a674953a08e11a8d21e022781b1b23a19b730afc309290bd9fb5305b95"
+}

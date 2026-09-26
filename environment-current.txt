@@ -1,0 +1,12 @@
+# 2026-09-21 本机现有环境快照（本项目不会自动创建虚拟环境）
+Python=3.12.14
+PyTorch=2.11.0+cu128
+CUDA=12.8
+GPU=NVIDIA GeForce RTX 4070 Laptop GPU
+UltralyticsSource=8.4.98
+NumPy=2.5.1
+OpenCV=5.0.0
+PyYAML=6.0.3
+Pandas=3.0.3
+Matplotlib=3.11.0
+

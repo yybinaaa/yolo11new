@@ -1,0 +1,50 @@
+architecture: e16_p3p4_gate
+pretrained: weights/initialization/yolo11m.pt
+initialization_kind: official
+# Reuse v002's full-data mixed cache; no new train/validation partition.
+data: ../../../steel-defect-yolo/data_cache/sahi_sf_mixed_1024_overlap20/data.yaml
+expected_source_images: 3200
+expected_train_entries: 15629
+save_epochs: [160, 170, 180]
+train:
+  epochs: 180
+  imgsz: 1024
+  batch: 4
+  nbs: 64
+  device: '0'
+  workers: 2
+  optimizer: AdamW
+  lr0: 0.001
+  lrf: 0.01
+  momentum: 0.9
+  weight_decay: 0.0005
+  warmup_epochs: 3.0
+  warmup_bias_lr: 0.0
+  cos_lr: true
+  seed: 42
+  deterministic: true
+  amp: true
+  cache: false
+  mosaic: 0.8
+  close_mosaic: 10
+  hsv_h: 0.0
+  hsv_s: 0.0
+  hsv_v: 0.12
+  scale: 0.2
+  translate: 0.05
+  fliplr: 0.5
+  flipud: 0.0
+  degrees: 0.0
+  shear: 0.0
+  perspective: 0.0
+  mixup: 0.0
+  copy_paste: 0.0
+  val: false
+  plots: false
+  save: true
+  save_period: -1
+  patience: 0
+  compile: false
+inference:
+  exclude_classes: [qilie]
+  device: '0'

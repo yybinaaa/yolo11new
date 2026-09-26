@@ -1,0 +1,62 @@
+architecture: baseline
+dataset: ../../data/splits/d001_train_test_4to1
+expected_split: {train: 2560, test: 640}
+expected_manifest_sha256: a8d3acbbe9f6b42e4a0ae02fc3a93bdba4b9ad4b1964eb443e7289eb186a50e6
+pretrained: ../../pretrained/yolo11m.pt
+checkpoints:
+  save_epochs: [160, 170, 180]
+preparation:
+  tile_size: 1024
+  overlap: 0.20
+  min_visibility: 0.30
+  min_box_size: 2
+  keep_empty_ratio: 0.10
+  include_full_images: true
+  seed: 42
+train:
+  epochs: 180
+  imgsz: 1024
+  batch: 4
+  nbs: 64
+  device: '0'
+  workers: 2
+  optimizer: AdamW
+  lr0: 0.001
+  lrf: 0.01
+  momentum: 0.9
+  weight_decay: 0.0005
+  warmup_epochs: 3.0
+  warmup_bias_lr: 0.0
+  cos_lr: true
+  seed: 42
+  deterministic: true
+  amp: true
+  cache: false
+  mosaic: 0.8
+  close_mosaic: 20
+  hsv_h: 0.0
+  hsv_s: 0.0
+  hsv_v: 0.12
+  scale: 0.2
+  translate: 0.05
+  fliplr: 0.5
+  flipud: 0.0
+  degrees: 0.0
+  shear: 0.0
+  perspective: 0.0
+  mixup: 0.0
+  copy_paste: 0.0
+  val: true
+  plots: true
+  save: true
+  save_period: -1
+  patience: 0
+  max_det: 1000
+  compile: false
+inference:
+  default_dataset_name: local_val
+  exclude_classes: []
+  device: '0'
+evaluation:
+  iou: 0.50
+  note: Local AP50 and precision/recall; official scoring formula not supplied.

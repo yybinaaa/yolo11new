@@ -1,0 +1,8 @@
+{
+  "next_epoch": 155,
+  "target_epoch": 180,
+  "optimizer_states": 335,
+  "ema_updates": 39091,
+  "live_model_restored": true,
+  "optimizer_and_scaler_restored": true
+}

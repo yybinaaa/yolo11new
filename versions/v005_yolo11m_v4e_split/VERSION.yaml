@@ -1,0 +1,23 @@
+name: v005_yolo11m_v4e_split
+parent: v003_yolo11m_v4e
+architecture: baseline
+inference: V4E
+source_version: 8.4.98
+dataset: d001_train_test_4to1
+train_images: 2560
+validation_images: 640
+initialized_from: official yolo11m.pt (80-class pretrained)
+trained: true
+status: trained
+created_at: '2026-09-22'
+code_directory: code
+weights_directory: weights
+submission_directory: inference_packages
+completed_epoch: 180
+planned_epochs: 180
+saved_epochs:
+- 160
+- 170
+- 180
+split_manifest_sha256: a8d3acbbe9f6b42e4a0ae02fc3a93bdba4b9ad4b1964eb443e7289eb186a50e6
+launch_entry: START_TRAINING.cmd

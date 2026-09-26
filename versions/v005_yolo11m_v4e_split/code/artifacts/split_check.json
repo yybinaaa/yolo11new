@@ -1,0 +1,10 @@
+{
+  "counts": {
+    "train": 2560,
+    "test": 640
+  },
+  "manifest_sha256": "a8d3acbbe9f6b42e4a0ae02fc3a93bdba4b9ad4b1964eb443e7289eb186a50e6",
+  "labels_verified": true,
+  "image_bytes_verified": true,
+  "overlap": 0
+}

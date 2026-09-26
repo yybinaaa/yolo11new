@@ -1,0 +1,16 @@
+name: v004_e16_v4e_split
+parent: v002_e16_v4e
+architecture: e16
+inference: V4E
+source_version: 8.4.98
+dataset: d001_train_test_4to1
+train_images: 2560
+validation_images: 640
+initialized_from: official yolo11m.pt (80-class pretrained)
+trained: false
+status: code_ready_not_trained
+created_at: '2026-09-22'
+code_directory: code
+weights_directory: weights
+submission_directory: inference_packages
+completed_epoch: 0

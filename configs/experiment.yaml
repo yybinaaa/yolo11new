@@ -1,0 +1,89 @@
+# 所有模型、训练和评测超参数统一在本文件管理。
+# scripts/train.py 和 scripts/evaluate.py 不提供超参数命令行覆盖，避免实验参数散落。
+
+active_version: v001_baseline
+
+paths:
+  # 相对路径均以 yolo11-source-workspace 为基准。
+  data: data/generated/v001_baseline/data.yaml
+  pretrained_weights: pretrained/yolo11m.pt
+  runs: runs
+  artifacts: artifacts
+
+defaults:
+  task: detect
+
+  model:
+    scale: m
+    definition: models/yolo11{scale}.yaml
+    # false：直接加载官方预训练 .pt；true：先按本版本 YAML 构图，再迁移匹配的预训练参数。
+    build_from_yaml: false
+    load_pretrained: true
+
+  train:
+    name: train
+    epochs: 200
+    imgsz: 1024
+    batch: 4
+    device: 0
+    workers: 2
+    optimizer: AdamW
+    lr0: 0.001
+    lrf: 0.01
+    momentum: 0.9
+    weight_decay: 0.0005
+    warmup_epochs: 3.0
+    warmup_momentum: 0.8
+    warmup_bias_lr: 0.0
+    cos_lr: true
+    patience: 0
+    seed: 42
+    deterministic: true
+    amp: true
+    cache: false
+    pretrained: true
+    close_mosaic: 20
+    hsv_h: 0.0
+    hsv_s: 0.0
+    hsv_v: 0.12
+    degrees: 0.0
+    translate: 0.05
+    scale: 0.2
+    shear: 0.0
+    perspective: 0.0
+    flipud: 0.0
+    fliplr: 0.5
+    mosaic: 0.8
+    mixup: 0.0
+    copy_paste: 0.0
+    val: false
+    plots: true
+    save: true
+    save_period: 10
+    exist_ok: false
+
+  evaluate:
+    # 留空时自动寻找 runs/<版本>/train*/weights/best.pt，其次 last.pt。
+    weights: null
+    name: evaluate
+    split: val
+    imgsz: 1024
+    batch: 4
+    device: 0
+    workers: 2
+    conf: 0.001
+    iou: 0.7
+    max_det: 300
+    half: false
+    rect: false
+    plots: true
+    save_json: false
+    exist_ok: false
+
+# 每个版本只写相对 defaults 的差异；仍然集中在这一个文件中。
+versions:
+  v001_baseline:
+    description: 官方 YOLO11m 基线，源码快照来自 Ultralytics 8.4.98。
+    parent: null
+    source_version: 8.4.98
+    overrides: {}

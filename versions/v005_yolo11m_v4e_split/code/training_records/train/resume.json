@@ -1,0 +1,8 @@
+{
+  "completed_epoch": 161,
+  "live_model": true,
+  "optimizer": true,
+  "ema": true,
+  "scaler": true,
+  "note": "Epoch-boundary resume; worker augmentation sequence is not guaranteed bitwise identical."
+}

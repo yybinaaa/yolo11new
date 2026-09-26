@@ -1,0 +1,9 @@
+{
+  "source": "C:\\Users\\16125\\Desktop\\钢材AI\\steel-defect-yolo\\yolo11m.pt",
+  "matched_state_items": 643,
+  "target_state_items": 654,
+  "source_classes": 80,
+  "target_classes": 9,
+  "new_branch_zero_projection": true,
+  "fresh_optimizer_and_ema": true
+}

@@ -1,0 +1,15 @@
+name: v002_e16_v4e
+parent: v001_baseline
+source_version: 8.4.98
+model: E16 YOLO11m with post-C3k2 layer16 multi-scale residual branch
+inference: V4E
+checkpoints: [160, 170, 180]
+excluded_submission_categories: [qilie]
+created_at: 2026-09-22
+license: AGPL-3.0
+status: archived_inference_release
+entrypoint: code/scripts/predict.py
+code_directory: code
+weights_directory: weights
+submission_directory: inference_packages
+training_archive: reference_only_original_project_required

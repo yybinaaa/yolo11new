@@ -1,0 +1,8 @@
+name: v001_baseline
+parent: null
+source: installed Ultralytics package
+source_version: 8.4.98
+source_sha256: 478e91d6bdf1d60c3d27e711e279c96625849b43f9982cb21361d18c96890a4b
+created_at: 2026-09-21
+license: AGPL-3.0
+status: immutable_baseline

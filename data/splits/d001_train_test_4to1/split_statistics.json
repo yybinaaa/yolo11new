@@ -1,0 +1,168 @@
+{
+  "source": "C:\\Users\\16125\\Desktop\\钢材AI\\train\\train",
+  "seed": 42,
+  "requested_ratio": "4:1",
+  "summary": {
+    "all": {
+      "images": 3200,
+      "background_images": 1074,
+      "positive_images": 2126,
+      "raw_xml_objects": 5889,
+      "cleaned_yolo_objects": 5885,
+      "source_groups": 1853,
+      "families": {
+        "numeric_prefix": 1952,
+        "C_prefix": 1248
+      }
+    },
+    "train": {
+      "images": 2560,
+      "background_images": 859,
+      "positive_images": 1701,
+      "raw_xml_objects": 4711,
+      "cleaned_yolo_objects": 4707,
+      "source_groups": 1573,
+      "families": {
+        "numeric_prefix": 1562,
+        "C_prefix": 998
+      }
+    },
+    "test": {
+      "images": 640,
+      "background_images": 215,
+      "positive_images": 425,
+      "raw_xml_objects": 1178,
+      "cleaned_yolo_objects": 1178,
+      "source_groups": 280,
+      "families": {
+        "numeric_prefix": 390,
+        "C_prefix": 250
+      }
+    }
+  },
+  "sizes": {
+    "4096x3000": 3200
+  },
+  "raw_annotation_issues": {
+    "clipped_boxes": 1,
+    "duplicate_boxes_removed": 4
+  },
+  "class_distribution": [
+    {
+      "class_id": 0,
+      "class_name": "gunyin",
+      "all_images": 236,
+      "all_boxes": 253,
+      "train_images": 189,
+      "train_boxes": 202,
+      "test_images": 47,
+      "test_boxes": 51
+    },
+    {
+      "class_id": 1,
+      "class_name": "huashang",
+      "all_images": 60,
+      "all_boxes": 153,
+      "train_images": 48,
+      "train_boxes": 122,
+      "test_images": 12,
+      "test_boxes": 31
+    },
+    {
+      "class_id": 2,
+      "class_name": "jiaza",
+      "all_images": 113,
+      "all_boxes": 220,
+      "train_images": 90,
+      "train_boxes": 176,
+      "test_images": 23,
+      "test_boxes": 44
+    },
+    {
+      "class_id": 3,
+      "class_name": "jieba",
+      "all_images": 604,
+      "all_boxes": 1190,
+      "train_images": 483,
+      "train_boxes": 952,
+      "test_images": 121,
+      "test_boxes": 238
+    },
+    {
+      "class_id": 4,
+      "class_name": "mamianmakeng",
+      "all_images": 309,
+      "all_boxes": 2433,
+      "train_images": 247,
+      "train_boxes": 1946,
+      "test_images": 62,
+      "test_boxes": 487
+    },
+    {
+      "class_id": 5,
+      "class_name": "qilie",
+      "all_images": 28,
+      "all_boxes": 69,
+      "train_images": 22,
+      "train_boxes": 55,
+      "test_images": 6,
+      "test_boxes": 14
+    },
+    {
+      "class_id": 6,
+      "class_name": "yanghuatiepi",
+      "all_images": 358,
+      "all_boxes": 492,
+      "train_images": 286,
+      "train_boxes": 394,
+      "test_images": 72,
+      "test_boxes": 98
+    },
+    {
+      "class_id": 7,
+      "class_name": "yiwuyaru",
+      "all_images": 464,
+      "all_boxes": 602,
+      "train_images": 371,
+      "train_boxes": 482,
+      "test_images": 93,
+      "test_boxes": 120
+    },
+    {
+      "class_id": 8,
+      "class_name": "zonglie",
+      "all_images": 296,
+      "all_boxes": 473,
+      "train_images": 237,
+      "train_boxes": 378,
+      "test_images": 59,
+      "test_boxes": 95
+    }
+  ],
+  "groups_after_duplicate_union": 1853,
+  "exact_duplicate_groups": 5,
+  "checks": {
+    "image_xml_pairs": true,
+    "image_header_sizes": true,
+    "image_file_verify": true,
+    "full_pixel_decode": false,
+    "exact_4_to_1": true,
+    "all_classes_in_both": true,
+    "cross_split_filename_overlap": 0,
+    "cross_split_source_group_overlap": 0,
+    "cross_split_exact_sha256_overlap": 0,
+    "copied_file_hashes_verified": true,
+    "yolo_labels_verified": true
+  },
+  "solver": {
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "objective": 0.37857208821449645,
+    "optimal": true
+  },
+  "limitations": [
+    "Filename prefix is a conservative source proxy, not confirmed batch metadata.",
+    "No perceptual near-duplicate audit or complete pixel decode was performed.",
+    "Existing models trained on all source images cannot yield an independent test score here.",
+    "val aliases test for loader compatibility; use only for final testing to retain holdout status."
+  ]
+}

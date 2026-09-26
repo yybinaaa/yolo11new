@@ -1,0 +1,19 @@
+{
+  "epoch": 180,
+  "total": 180,
+  "updated_at": "2026-09-25T22:37:59.976996",
+  "losses": [
+    0.9838493466377258,
+    0.8238862752914429,
+    1.04294753074646
+  ],
+  "metrics": {
+    "metrics/precision(B)": 0.49569,
+    "metrics/recall(B)": 0.39032,
+    "metrics/mAP50(B)": 0.36283,
+    "metrics/mAP50-95(B)": 0.20782,
+    "val/box_loss": 1.63361,
+    "val/cls_loss": 2.73082,
+    "val/dfl_loss": 1.01914
+  }
+}

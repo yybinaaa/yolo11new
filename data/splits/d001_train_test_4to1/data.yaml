@@ -1,0 +1,13 @@
+train: images/train
+val: images/test
+test: images/test
+names:
+- gunyin
+- huashang
+- jiaza
+- jieba
+- mamianmakeng
+- qilie
+- yanghuatiepi
+- yiwuyaru
+- zonglie

@@ -1,0 +1,14 @@
+{
+  "started_at": "2026-09-22T21:09:05.192779",
+  "resume": false,
+  "epochs": 180,
+  "save_epochs": [
+    160,
+    170,
+    180
+  ],
+  "split_sha256": "a8d3acbbe9f6b42e4a0ae02fc3a93bdba4b9ad4b1964eb443e7289eb186a50e6",
+  "status": "interrupted",
+  "error": "",
+  "ended_at": "2026-09-23T14:22:59.666700"
+}

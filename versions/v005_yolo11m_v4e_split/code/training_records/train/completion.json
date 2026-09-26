@@ -1,0 +1,6 @@
+{
+  "completed_epoch": 180,
+  "best_fitness": 0.21044,
+  "best_selection": "Ultralytics whole-image validation fitness; run evaluate.py for V4E metrics",
+  "status": "complete"
+}

@@ -1,0 +1,17 @@
+{
+  "split": {
+    "counts": {
+      "train": 2560,
+      "test": 640
+    },
+    "manifest_sha256": "a8d3acbbe9f6b42e4a0ae02fc3a93bdba4b9ad4b1964eb443e7289eb186a50e6",
+    "labels_verified": true,
+    "image_bytes_verified": false,
+    "overlap": 0
+  },
+  "architecture": "e16",
+  "parameters": 20201643,
+  "finite_forward": true,
+  "training_started": false,
+  "official_pretrained_sha256": "d5ffc1a674953a08e11a8d21e022781b1b23a19b730afc309290bd9fb5305b95"
+}

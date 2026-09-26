@@ -1,0 +1,13 @@
+name: v003_yolo11m_v4e
+parent: v001_baseline
+source_version: 8.4.98
+model: original YOLO11m, no custom network blocks
+inference: V4E
+checkpoints: [160, 170, 180]
+default_epoch: 170
+checkpoint_source: steel-defect-yolo/runs/yolo11/yolo11m_sahi_sf_continue_epoch150_to250/weights
+entrypoint: code/scripts/predict.py
+excluded_submission_categories: [qilie]
+status: archived_baseline_weights_with_v4e
+created_at: 2026-09-22
+license: AGPL-3.0

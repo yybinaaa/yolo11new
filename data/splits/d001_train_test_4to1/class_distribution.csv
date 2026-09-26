@@ -1,0 +1,10 @@
+﻿class_id,class_name,all_images,all_boxes,train_images,train_boxes,test_images,test_boxes
+0,gunyin,236,253,189,202,47,51
+1,huashang,60,153,48,122,12,31
+2,jiaza,113,220,90,176,23,44
+3,jieba,604,1190,483,952,121,238
+4,mamianmakeng,309,2433,247,1946,62,487
+5,qilie,28,69,22,55,6,14
+6,yanghuatiepi,358,492,286,394,72,98
+7,yiwuyaru,464,602,371,482,93,120
+8,zonglie,296,473,237,378,59,95

@@ -1,0 +1,28 @@
+name: v006_e16_p3p4_gate_v4e
+parent: v002_e16_v4e
+source_version: 8.4.98
+created_at: 2026-09-26
+architecture: E16 plus P3/P4 spatial residual gating at layer16
+gate_hidden_channels: 32
+gate_function: 2 * sigmoid(logits)
+identity_initialization: zero logits weight and bias, gate equals 1
+p4_source_layer: 13
+detect_layers:
+- 16
+- 19
+- 22
+initialization_default: weights/initialization/yolo11m.pt
+training_data: inherited v002 full 3200-image mixed cache, no local split
+local_validation: false
+inference: V4E inherited from v002
+excluded_submission_categories:
+- qilie
+status: code_ready_not_trained
+trained: false
+completed_epoch: 0
+code_directory: code
+weights_directory: weights
+submission_directory: inference_packages
+training_entrypoint: code/scripts/train.py
+inference_entrypoint: code/scripts/predict.py
+license: AGPL-3.0

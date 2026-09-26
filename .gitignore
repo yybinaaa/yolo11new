@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+artifacts/*
+!artifacts/.gitkeep
+runs/*
+!runs/.gitkeep
+
+
+# Shared local datasets, generated caches and model binaries (keep metadata/docs).
+/data/raw/train/
+/data/fusai/
+/data/generated/
+/data/splits/*/images/
+/data/splits/*/annotations/
+/pretrained/**/*.pt
+/pretrained/*.pt
+/datasets/
+/versions/*/code/data/
+/versions/*/code/pretrained/*.pt
+/versions/*/weights/
+/versions/*/inference_packages/

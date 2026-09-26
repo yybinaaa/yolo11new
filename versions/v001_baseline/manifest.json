@@ -1,0 +1,45 @@
+{
+  "files": {
+    "INFER_FUSAI.py": {
+      "bytes": 272,
+      "sha256": "8069ecf106a59a6e50425444b713804db364d0542d3f371b42cd337987dd178f"
+    },
+    "START_INFERENCE.ps1": {
+      "bytes": 969,
+      "sha256": "493b574921b6f3de7c40b4eafa5cacfaef7a446e859160dcfe74883ba5442ca6"
+    },
+    "START_INFERENCE.cmd": {
+      "bytes": 102,
+      "sha256": "a83b311461128c523fec9bf93f7a7958941f62f0feefe67ae1c1b6bad983c5a5"
+    },
+    "INFERENCE_README.md": {
+      "bytes": 3761,
+      "sha256": "b87c5b4e652255b590d6c10915e621c4ec5832d2494337cf9b2da16734c49cbc"
+    },
+    "README.md": {
+      "bytes": 1111,
+      "sha256": "4c6ab7a87df824d64211f48b4637993a88a64efdcd0cecee2db19ab738ef4c0b"
+    },
+    "inference_tools/batch_fusai.py": {
+      "bytes": 14979,
+      "sha256": "2388eab45d1ac856272ef8bff9a3786b5a56165658df0ff05e20be282e02bb91"
+    },
+    "inference_tools/runtime_support.py": {
+      "bytes": 1095,
+      "sha256": "fe3c83d1c7de8183a766cfd4575d82492b5d07a1f0054a54056bec2b6a7bb38a"
+    },
+    "inference_tools/test_batch_fusai.py": {
+      "bytes": 3862,
+      "sha256": "663dd83c06242f5d6f19d25e4342a9c1b4fc0f3b33b1add0f2235e3f61975597"
+    },
+    "inference_tools/v4e_core.py": {
+      "bytes": 7036,
+      "sha256": "f2ac61df60df262fa458f34765e7798f461ca49544293963d820e442cefb2c89"
+    }
+  },
+  "path_migration": {
+    "date": "2026-09-26",
+    "scope": "Shared data and initialization paths; original run records and PT unchanged",
+    "details": "../../SHARED_LAYOUT.md"
+  }
+}

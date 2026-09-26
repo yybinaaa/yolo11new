@@ -1,0 +1,15 @@
+# Install the matching PyTorch CUDA build separately; this is the tested GPU build.
+torch==2.11.0
+torchvision==0.26.0
+# Ultralytics 8.4.98 source is bundled locally; do not substitute a pip upgrade.
+numpy==2.5.1
+opencv-python==5.0.0.93
+Pillow==12.3.0
+PyYAML==6.0.3
+scipy==1.18.0
+matplotlib==3.11.0
+psutil==7.2.2
+polars==1.42.1
+ultralytics-thop==2.0.20
+requests==2.34.2
+tqdm==4.68.4

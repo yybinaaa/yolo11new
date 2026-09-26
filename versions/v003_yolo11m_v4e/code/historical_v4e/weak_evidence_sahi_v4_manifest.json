@@ -1,0 +1,127 @@
+{
+  "strategy": "Weak-Evidence Amplified dual-scale SAHI V4",
+  "weights": "C:\\Users\\16125\\Desktop\\钢材AI\\steel-defect-yolo\\runs\\yolo11\\yolo11m_sahi_sf_continue_epoch150_to250\\weights\\epoch170.pt",
+  "source": "C:\\Users\\16125\\Desktop\\钢材AI\\初赛测试集\\初赛",
+  "first_pass_cache": "C:\\Users\\16125\\Desktop\\钢材AI\\steel-defect-yolo\\outputs\\yolo11\\epoch170_inference_ab_cache_conf005\\epoch170_candidates_conf005.json",
+  "anchor": "C:\\Users\\16125\\Desktop\\钢材AI\\steel-defect-yolo\\outputs\\yolo11\\epoch170_adaptive_reslice_v3_ab_5\\05_V3E_epoch170_first018_ref018_union_nms050_submission.json",
+  "anchor_platform_metrics": {
+    "recall": 0.8229,
+    "precision": 0.3183,
+    "f1": 0.459,
+    "mAP@0.5": 0.4945,
+    "TP": 818,
+    "FP": 1752,
+    "FN": 176,
+    "score": 82.29
+  },
+  "plan": {
+    "schema_version": 1,
+    "strategy": "Weak-Evidence Amplified dual-scale SAHI V4",
+    "settings": {
+      "weak_score_range": [
+        0.05,
+        0.18
+      ],
+      "zoom_size": 640,
+      "context_size": 1280,
+      "max_seeds_per_image": 2,
+      "cluster_iou": 0.25,
+      "cluster_iom": 0.55,
+      "anchor_overlap_iou": 0.3,
+      "dedupe_center_distance": 192.0
+    },
+    "source_images": 669,
+    "weak_candidates_considered": 4028,
+    "weak_candidates_after_anchor_filter": 2320,
+    "weak_clusters": 1629,
+    "planned_images": 476,
+    "planned_seed_groups": 779,
+    "planned_views": 1558
+  },
+  "model_imgsz": 1024,
+  "candidate_conf": 0.05,
+  "inference_seconds": 96.91990770003758,
+  "inference_candidates": 2163,
+  "confirmation": {
+    "confirm_iou": 0.1,
+    "confirm_iom": 0.5,
+    "safe_threshold": 0.18,
+    "aggressive_threshold": 0.1,
+    "agreement_floor": 0.08,
+    "agreement_iou": 0.2,
+    "nms_iou": 0.5,
+    "novel_iou": 0.5
+  },
+  "outputs": [
+    {
+      "stem": "01_V4A_zoom640_t018_safe_add_submission",
+      "description": "640 zoom 视野确认，threshold=0.18，安全追加到 V3E",
+      "detections": 2698,
+      "anchor_detections": 2570,
+      "additive_novel_detections": 128,
+      "images_with_detections": 588,
+      "anchor_prefix_preserved": true,
+      "json": "C:\\Users\\16125\\Desktop\\钢材AI\\steel-defect-yolo\\outputs\\yolo11\\epoch170_weak_evidence_sahi_v4\\01_V4A_zoom640_t018_safe_add_submission.json",
+      "zip": "C:\\Users\\16125\\Desktop\\钢材AI\\steel-defect-yolo\\outputs\\yolo11\\epoch170_weak_evidence_sahi_v4\\01_V4A_zoom640_t018_safe_add_submission.zip",
+      "json_sha256": "AB502EF0D9A334F1F93955371931E396FCAF7BE8B27172E7431DC531761D1780",
+      "zip_sha256": "9E909F01072800FF7F0488398BE3EA031E8ADBC1D4C4A32846A230F8066ABF06",
+      "zip_validation": "passed"
+    },
+    {
+      "stem": "02_V4B_context1280_t018_safe_add_submission",
+      "description": "1280 context 视野确认，threshold=0.18，安全追加到 V3E",
+      "detections": 2608,
+      "anchor_detections": 2570,
+      "additive_novel_detections": 38,
+      "images_with_detections": 583,
+      "anchor_prefix_preserved": true,
+      "json": "C:\\Users\\16125\\Desktop\\钢材AI\\steel-defect-yolo\\outputs\\yolo11\\epoch170_weak_evidence_sahi_v4\\02_V4B_context1280_t018_safe_add_submission.json",
+      "zip": "C:\\Users\\16125\\Desktop\\钢材AI\\steel-defect-yolo\\outputs\\yolo11\\epoch170_weak_evidence_sahi_v4\\02_V4B_context1280_t018_safe_add_submission.zip",
+      "json_sha256": "F991D30943B96213C845B0AEFAD7F03A933A3EE75379958A108CF128B5D5294A",
+      "zip_sha256": "4C54456BBEF6C7B6CEBA79B1A7C7D9D712569CDB8F72C8F3F951F2C7917581D2",
+      "zip_validation": "passed"
+    },
+    {
+      "stem": "03_V4C_shape_adaptive_t018_safe_add_submission",
+      "description": "按弱候选形态选择 zoom/context，threshold=0.18，安全追加",
+      "detections": 2683,
+      "anchor_detections": 2570,
+      "additive_novel_detections": 113,
+      "images_with_detections": 586,
+      "anchor_prefix_preserved": true,
+      "json": "C:\\Users\\16125\\Desktop\\钢材AI\\steel-defect-yolo\\outputs\\yolo11\\epoch170_weak_evidence_sahi_v4\\03_V4C_shape_adaptive_t018_safe_add_submission.json",
+      "zip": "C:\\Users\\16125\\Desktop\\钢材AI\\steel-defect-yolo\\outputs\\yolo11\\epoch170_weak_evidence_sahi_v4\\03_V4C_shape_adaptive_t018_safe_add_submission.zip",
+      "json_sha256": "9695AB3ABD2DB8B16E585405C3BE1D64D672B3B150D34A161B4F03B1B097998B",
+      "zip_sha256": "917E72A1DE0130F03623B2EB2F602A5637D03D3E95C74018746C6D23711850F6",
+      "zip_validation": "passed"
+    },
+    {
+      "stem": "04_V4D_dual_view_agreement_t008_safe_add_submission",
+      "description": "zoom/context 双视野同类一致，floor=0.08，加权框融合后安全追加",
+      "detections": 2606,
+      "anchor_detections": 2570,
+      "additive_novel_detections": 36,
+      "images_with_detections": 585,
+      "anchor_prefix_preserved": true,
+      "json": "C:\\Users\\16125\\Desktop\\钢材AI\\steel-defect-yolo\\outputs\\yolo11\\epoch170_weak_evidence_sahi_v4\\04_V4D_dual_view_agreement_t008_safe_add_submission.json",
+      "zip": "C:\\Users\\16125\\Desktop\\钢材AI\\steel-defect-yolo\\outputs\\yolo11\\epoch170_weak_evidence_sahi_v4\\04_V4D_dual_view_agreement_t008_safe_add_submission.zip",
+      "json_sha256": "4C276F062F9828479D6702B99AD459E493141DF6C003E4EC65872452940CED50",
+      "zip_sha256": "13A1B3AE4AD756183B54E597A0E73A2D7BEB7DA9D293CBDC66FE86CD669B1F24",
+      "zip_validation": "passed"
+    },
+    {
+      "stem": "05_V4E_dual_view_any_t010_safe_add_submission",
+      "description": "任一双尺度视野确认，threshold=0.10，Recall 激进安全追加",
+      "detections": 2825,
+      "anchor_detections": 2570,
+      "additive_novel_detections": 255,
+      "images_with_detections": 598,
+      "anchor_prefix_preserved": true,
+      "json": "C:\\Users\\16125\\Desktop\\钢材AI\\steel-defect-yolo\\outputs\\yolo11\\epoch170_weak_evidence_sahi_v4\\05_V4E_dual_view_any_t010_safe_add_submission.json",
+      "zip": "C:\\Users\\16125\\Desktop\\钢材AI\\steel-defect-yolo\\outputs\\yolo11\\epoch170_weak_evidence_sahi_v4\\05_V4E_dual_view_any_t010_safe_add_submission.zip",
+      "json_sha256": "DF1A083508C4BCB4340E757B9B663383E97F903E3129EF9972B55B67CC4A8169",
+      "zip_sha256": "48C6AAC06874FD8747E3AED4DA889C7A96F7859485E52F86FF13BB3C5B797E0D",
+      "zip_validation": "passed"
+    }
+  ]
+}

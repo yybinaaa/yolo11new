@@ -1,0 +1,21 @@
+{
+  "architecture": "e16_p3p4_gate",
+  "data": {
+    "source_images": 3200,
+    "train_entries": 15629,
+    "local_split_created": false,
+    "evaluation_images_used": 0,
+    "validation_enabled": false,
+    "yaml_sha256": "76861e59e31b1a0c16a10d8c2a038af8d742ab1b65213747dd6ef1fc72cc8bdb",
+    "list_sha256": "0815cb84fe1dd7e333bd11ce65bf235e83918f6e0a0e69984342808afe60fd2b",
+    "manifest_sha256": "31711730a116f98e063829e6a03a41cd76eacde173d160c5c1698ec4df0308fa",
+    "image_metadata_and_label_hash": "16e38375c473ee94a9b04d276f673a01df7d9796ceec5204b65fa6f931a225c6",
+    "image_bytes_hashed": false,
+    "note": "Images checked for existence/size/mtime; labels checked by SHA256."
+  },
+  "parameters": 20244684,
+  "gate_parameters": 43041,
+  "initialization_sha256": "d5ffc1a674953a08e11a8d21e022781b1b23a19b730afc309290bd9fb5305b95",
+  "synthetic_forward": true,
+  "training_started": false
+}
