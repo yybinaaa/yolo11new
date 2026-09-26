@@ -2,6 +2,25 @@
 
 v001～v005 的共享数据统一位于 `data/`，官方初始权重位于 `pretrained/`。运行、创建新版本与历史记录说明见 [SHARED_LAYOUT.md](SHARED_LAYOUT.md)。v006 尚未迁移共享路径。
 
+## 本机运行环境
+
+以下为项目记录的本机环境（2026-09-21），在 README 正文列出，便于直接查看和复现：
+
+| 项目 | 版本或配置 |
+|---|---|
+| Python | 3.12.14 |
+| PyTorch | 2.11.0+cu128 |
+| PyTorch CUDA 运行时 | 12.8 |
+| GPU | NVIDIA GeForce RTX 4070 Laptop GPU |
+| Ultralytics 本地源码 | 8.4.98 |
+| NumPy | 2.5.1 |
+| OpenCV | 5.0.0（对应安装包 opencv-python 5.0.0.93） |
+| PyYAML | 6.0.3 |
+| Pandas | 3.0.3 |
+| Matplotlib | 3.11.0 |
+
+这是已有环境记录；显卡型号不是必须相同。Pandas 属于原环境中的包，v005 的直接依赖清单未将其列为必装项。创建虚拟环境和安装固定版本的步骤如下。
+
 ## 从零配置环境（Windows，优先使用 v005）
 
 以下命令在 **Windows PowerShell** 中执行。除克隆仓库外，其余命令均在仓库根目录执行。已有可用环境的用户不需要重装；本节供新电脑安装使用。
